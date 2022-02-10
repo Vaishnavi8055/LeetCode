@@ -1,6 +1,8 @@
 class Solution {
     public int countPrimes(int n) {
         
+      //  Time Complexity - O(n*log(logn))
+        
         if(n<=1){
             return 0;
         }
@@ -8,6 +10,7 @@ class Solution {
         int count = 0;
         
         boolean prime[] = new boolean[n];
+        
         // assume all are prime i.e from 1 to n-1
         Arrays.fill(prime,true);
         
