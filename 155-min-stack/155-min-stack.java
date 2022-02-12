@@ -1,5 +1,59 @@
 class MinStack {
     
+    // Using LinkedList
+    
+    Node head;
+    
+
+    public MinStack() {
+        
+        
+    }
+    
+    public void push(int val) {
+        
+        if(head == null){
+             head = new Node(val, null, val);
+        }
+        else{
+             head = new Node(val , head , Math.min(val , head.min)); 
+        }
+        
+    }
+    
+    public void pop() {
+        head = head.next;
+    }
+    
+    public int top() {
+        return head.val;
+    }
+    
+    public int getMin() {
+        return head.min;
+    }
+    
+    
+    
+// Node class
+class Node {
+    
+    int val;
+    Node next;
+    int min;
+    
+    // constructor
+    public Node( int val , Node next ,  int min){
+        this.val = val;
+        this.next = next;
+        this.min = min;
+    }
+    
+}
+    
+    
+    
+       /**
     Stack<Integer> stack ;
     int min ;
 
@@ -22,6 +76,7 @@ class MinStack {
             min = val;
         }
         
+        // push the smaller one
         stack.push(val);
         
         
@@ -49,7 +104,9 @@ class MinStack {
         return min;
     
     }
+    **/
 }
+
 
 /**
  * Your MinStack object will be instantiated and called as such:
