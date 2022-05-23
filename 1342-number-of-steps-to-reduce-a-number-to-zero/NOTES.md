@@ -1,3 +1,4 @@
+```
 Can also be done by bit manipulation.
 ​
 checking even  ------------------------------------->
@@ -23,4 +24,5 @@ removing each bit from end one by one tends to 0 at the end.
 ​
 ​
 ​
+```
 ​
